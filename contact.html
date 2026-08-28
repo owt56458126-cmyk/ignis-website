@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignis - 聯絡我們</title>
+    <link rel="stylesheet" href="ignis.css">
+    <link href="https://fonts.googleapis.com/css2?family=Impact&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="hero-section">
+            <h1 class="brand-title">IGNIS</h1>
+            <p class="brand-tagline">學生會候選內閣</p>
+        </header>
+
+        <nav class="sticky-navbar">
+            <div class="nav-tabs">
+                <a href="ignis.html" class="nav-link-btn">主頁</a>
+                <a href="platform.html" class="nav-link-btn">政綱</a>
+                <a href="welfare.html" class="nav-link-btn">福利</a>
+                <a href="events.html" class="nav-link-btn">活動</a>
+                <button class="nav-link active">聯絡我們</button>
+            </div>
+            <div class="search-container">
+                <input type="text" id="contactSearchInput" placeholder="搜尋..." onkeypress="handleContactSearch(event)">
+                <button class="search-btn" onclick="executeContactSearch()">搜尋</button>
+            </div>
+        </nav>
+
+        <main class="content-sections">
+
+            <div class="category-header">提交意見</div>
+
+            <section class="about-card" style="max-width: 600px; margin: 1.5rem auto; padding: 2rem;">
+                <form action="https://formsubmit.co/cdg220085@school.cdgfss.edu.hk" method="POST" style="display: flex; flex-direction: column; gap: 1.2rem;">
+                    
+                    <input type="hidden" name="_subject" value="Ignis 意見箱 收到新的學生意見">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+                        <label for="name" style="color: #ff6600; font-weight: bold;">姓名</label>
+                        <input type="text" id="name" name="name" required style="padding: 0.8rem; background: #222; color: #fff; border: 1px solid #444; border-radius: 6px; outline: none;">
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+                        <label for="email" style="color: #ff6600; font-weight: bold;">Gmail 電郵地址</label>
+                        <input type="email" id="email" name="email" required style="padding: 0.8rem; background: #222; color: #fff; border: 1px solid #444; border-radius: 6px; outline: none;">
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+                        <label for="category" style="color: #ff6600; font-weight: bold;">意見類別</label>
+                        <select id="category" name="category" style="padding: 0.8rem; background: #222; color: #fff; border: 1px solid #444; border-radius: 6px; outline: none;">
+                            <option value="校政建議">校政建議</option>
+                            <option value="爭取開放iPad權限">爭取開放iPad權限</option>
+                            <option value="爭取開放iPad應用程式">爭取開放iPad應用程式</option>
+                            <option value="其他意見">其他意見</option>
+                        </select>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+                        <label for="message" style="color: #ff6600; font-weight: bold;">意見內容</label>
+                        <textarea id="message" name="message" rows="6" required style="padding: 0.8rem; background: #222; color: #fff; border: 1px solid #444; border-radius: 6px; outline: none; resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" style="background: #ff6600; color: #fff; font-weight: bold; padding: 0.9rem; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: background 0.2s;">傳送意見</button>
+                </form>
+
+                <div style="margin-top: 2rem; border-top: 1px solid #333; padding-top: 1.5rem; text-align: center; color: #ccc; line-height: 1.8;">
+                    <p style="margin: 0.5rem 0;">了解更多詳情：<a href="https://www.instagram.com/cdgfss.ignis?igsi=bW1reW1sMjBkNDlo&utm_source=qr" target="_blank" style="color: #ff6600; font-weight: bold; text-decoration: underline;">@cdgfss.ignis</a></p>
+                    <p style="margin: 0.5rem 0;">聯絡正副主席：<strong>5A 羅綺晴</strong>、<strong>5C 葉宣彤</strong>、<strong>5C 邵峻熹</strong></p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="main-footer">
+            <p>© 2026 學生會候選內閣 IGNIS.</p>
+        </footer>
+    </div>
+
+    <script src="ignis.js"></script>
+    <script>
+        function handleContactSearch(event) {
+            if (event.key === 'Enter') {
+                executeContactSearch();
+            }
+        }
+
+        function executeContactSearch() {
+            const input = document.getElementById('contactSearchInput');
+            if (!input) return;
+            const query = input.value.toLowerCase().trim();
+            if (query) {
+                alert('搜尋關鍵字：' + query);
+            }
+        }
+    </script>
+</body>
+</html>
