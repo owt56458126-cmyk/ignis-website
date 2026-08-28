@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: #0f0f11;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.hero-section {
+    text-align: center;
+    padding: clamp(2rem, 5vw, 3.5rem) 1rem;
+    background: linear-gradient(180deg, rgba(255,102,0,0.15) 0%, rgba(15,15,17,0) 100%);
+}
+
+.brand-title {
+    font-family: 'Impact', sans-serif;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    letter-spacing: 2px;
+    color: #ff6600;
+}
+
+.brand-tagline {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: #cccccc;
+    margin-top: 0.5rem;
+}
+
+.sticky-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #1a1a1e;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    border-bottom: 1px solid #2a2a30;
+    gap: 1rem;
+}
+
+.nav-tabs {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.nav-link, .nav-link-btn {
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.nav-link.active {
+    background-color: #ff6600;
+    color: #ffffff;
+}
+
+.nav-link-btn {
+    background-color: transparent;
+    color: #aaaaaa;
+}
+
+.nav-link-btn:hover {
+    color: #ffffff;
+    background-color: #2a2a30;
+}
+
+.search-container input {
+    background-color: #121215;
+    border: 1px solid #3a3a42;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+    width: 220px;
+}
+
+.search-container input:focus {
+    border-color: #ff6600;
+}
+
+.content-sections {
+    flex: 1;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.control-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+#toggleAllBtn {
+    background-color: #2a2a30;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#toggleAllBtn:hover {
+    background-color: #3a3a42;
+}
+
+.category-header {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #ff6600;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid #ff6600;
+}
+
+.category-header:first-of-type {
+    margin-top: 0;
+}
+
+.about-card {
+    background-color: #1a1a1e;
+    border: 1px solid #2a2a30;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.about-content p {
+    color: #cccccc;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.accordion-item {
+    background-color: #1a1a1e;
+    border: 1px solid #2a2a30;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+}
+
+.accordion-item:hover {
+    border-color: #4a4a52;
+}
+
+.accordion-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #1f1f24;
+    user-select: none;
+}
+
+.title-text {
+    color: #ffffff;
+}
+
+.arrow {
+    color: #ff6600;
+    transition: transform 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.accordion-item.active .arrow {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    background-color: #151518;
+    padding: 0 1.2rem;
+    color: #cccccc;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.accordion-item.active .accordion-content {
+    padding: 1.2rem;
+    max-height: 1200px;
+}
+
+.accordion-content p {
+    margin-bottom: 0.8rem;
+}
+
+.accordion-content p:last-child {
+    margin-bottom: 0;
+}
+
+.no-results {
+    text-align: center;
+    padding: 2rem;
+    color: #888888;
+    font-size: 1.1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #141417;
+    color: #777777;
+    font-size: 0.9rem;
+    border-top: 1px solid #222226;
+}

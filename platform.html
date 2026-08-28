@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignis - 政綱全文</title>
+    <link rel="stylesheet" href="ignis.css">
+    <link href="https://fonts.googleapis.com/css2?family=Impact&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="hero-section">
+            <h1 class="brand-title">IGNIS</h1>
+            <p class="brand-tagline">學生會候選內閣</p>
+        </header>
+
+        <nav class="sticky-navbar">
+            <div class="nav-tabs">
+                <a href="ignis.html" class="nav-link-btn">主頁</a>
+                <button class="nav-link active">政綱</button>
+                <a href="welfare.html" class="nav-link-btn">福利</a>
+                <a href="events.html" class="nav-link-btn">活動</a>
+                <a href="contact.html" class="nav-link-btn">聯絡我們</a>
+            </div>
+            <div class="search-container">
+                <input type="text" id="platformSearchInput" placeholder="搜尋政綱..." onkeypress="handlePlatformSearch(event)">
+                <button class="search-btn" onclick="executePlatformSearch()">搜尋</button>
+            </div>
+        </nav>
+
+        <main class="content-sections">
+
+            <div class="category-header">完整政綱總覽</div>
+
+            <div class="control-bar">
+                <button id="toggleAllBtn" onclick="toggleAllAccordions()">全部展開 ＋</button>
+            </div>
+
+            <div class="accordion-container" id="platformList">
+
+                <h2 class="section-group-title">I. 引言</h2>
+
+                <div class="accordion-item active">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">引言</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>學生會作為學生與校方溝通的重要渠道，本閣希望透過活動凝聚所有學生，並透過不同服務及爭取事項促進校方與學生的聯繫，為同學帶來更美好、舒適的校園生活。本閣將秉持務實透明的原則，積極跟進各項訴求，讓同學的意見能被聽見，校方的政策亦能更貼近學生需要。為此，本閣規劃了以下政綱內容。</p>
+                    </div>
+                </div>
+
+                <h2 class="section-group-title">II. 爭取事項</h2>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">1. 爭取於更衣室增設風筒</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>不少同學在上體育課後或小息進行球類活動後，頭髮會被汗水沾濕，不僅令人感到不適，亦可能產生衛生問題。潮濕的頭髮若不及時處理，在天氣較涼的時候更易引致著涼。再者，本校更衣室設有淋浴間，增設風筒可以讓同學在淋浴後更快吹乾頭髮，減少因濕髮而帶來的不便。有見及此，本閣將向校方爭取於更衣室增設風筒，供有需要的同學使用。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">2. 爭取為沒有掛鈎的桌子重新添置掛鈎</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>由於學校有不少桌子缺乏掛鈎，同學只能把背包放在地上。背包不僅容易沾上灰塵，更會阻塞通道，令老師及同學難以通過，甚至容易絆倒，構成安全隱患。有見及此，本閣將向校方反映受影響的桌子位置，並爭取為沒有掛鈎的桌子重新添置掛鈎，讓同學能夠安全、整潔地掛放背包，改善課室環境及通行安全之餘，亦方便同學使用。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">3. 爭取更換及翻新儲物櫃</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>由於學校有部分儲物櫃已經破損（如透明膠片破裂、嚴重變形等），同學的私隱和財產未受充分保護，影響日常使用體驗之餘，亦造成安全隱憂。有見及此，本閣將向校方反映受損儲物櫃的具體情況，並爭取盡快安排更換或翻新破損的儲物櫃，方便同學使用。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">4. 爭取解決學校冷氣機滴水問題</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>學校部分冷氣機的滴水問題已經持續已久，不少同學在經過正場、後花園時經常被冷氣機滴下的水滴弄濕，影響日常通行之餘，亦可能引致地面濕滑，造成不便及困擾。有見及此，本閣將向校方反映具體情況，並爭取盡快改善滴水問題，為師生提供更安全舒適的校園環境。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">5. 爭取在音樂日賽前公開評分準則</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>本閣留意到歷年音樂日後均不少同學反映，因不清楚音樂日比賽的評分準則，導致賽後結果出現不少爭議，影響比賽的公信力。有見及此，本閣將向校方爭取，在音樂日比賽前正式公開詳細的評分準則，包括音準、節奏、台風、舞台效果及整體表現等各項目的比重。本閣相信，同學若能提前了解評分標準，將能更有方向地準備及排練，從而在比賽中展現最佳狀態。此舉不僅能使評核過程更透明公正，減少不必要的爭議，亦能讓同學參考準則持續改善表現，提升整體比賽水平。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">6. 爭取 Music Day 初賽使用相同評判</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>本閣留意到Music Day初賽不同日期會由不同老師進行評分，而不同老師對音準、台風等項目的重視程度各異，導致評分標準不一，嚴重影響比賽的公平性。為確保所有同學能在相同的標準下進行比賽，本閣將爭取Music Day初賽的所有日期均由相同的評判評分，確保評分標準一致，減少因評判不同而產生的爭議，讓同學能夠在公平的環境下展現才能，並提升比賽的公信力。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">7. 爭取增加相機使用場合</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>本校目前允許同學於Sports Day及Swimming Gala等活動攜帶及使用相機。為提供更多空間予同學拍照留念，記錄校園生活的精彩時刻，本閣將向校方爭取，將相機使用範圍擴展至Music Day及Talent Show等其他大型活動，讓同學能即時記錄珍貴瞬間之餘，亦方便日後重溫校園點滴。我們會與校方積極商討相關安排，包括使用規則及責任指引，確保在不影響活動進行的前提下，為同學創造更多留影的機會。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">8. 爭取公開啦啦隊評分準則</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>為提升啦啦隊比賽的透明度與公平性，本閣將爭取公開詳細的評分準則及扣分規定，包括動作難度、整齊度、創意及口號清晰度等評分項目。本閣將確保在比賽前向所有參賽社員清楚說明完整準則，讓同學能夠根據準則更有針對性地準備及改進。賽後亦會爭取提供具體的評分回饋，讓同學了解自身表現的優點與不足，避免因評分標準不明而產生爭議，同時促進比賽的公平與專業水平。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">9. 爭取建立系統化資訊科技帳號權限及功能申請機制</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>學校近年持續推動BYOD計畫，允許同學攜帶iPad於課堂上作學習用途。然而，不少同學反映，iPad缺乏部分所需的應用程式，或未能使用Google帳戶的某些功能，影響學習體驗。有見及此，本閣將透過學生會溝通渠道，與資訊科技部門保持緊密聯繫，積極爭取建立一套系統化的處理機制。本閣將設立專門平台，供同學提交開放權限或新增iPad應用程式的請求，並盡快轉交相關部門審批。無論請求最終是否獲得通過，本閣均會在3至5個工作天內，透過Gmail通知有關同學審批結果，確保每一項請求都能得到及時且有效的處理。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">10. 爭取舉辦聯校交換生活動</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>學校曾於22-23年度與聖馬可中學，以及25-26年度與蒙民偉書院、旅港開平商會中學舉辦交換生計畫。不少同學在計畫期間建立的友誼一直延續至今，可見計畫相當成功，深受同學歡迎。為了讓更多同學有機會參與同類型活動，拓闊眼界，認識來自不同學校的朋友，本閣將積極向校方爭取，在未來舉辦更多交換生計畫及其他聯校交流活動，讓同學能夠走出校園，體驗更豐富多元的學習生活，為中學生涯留下珍貴回憶。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">11. 爭取同學於第一學期考試前可選擇性清理儲物櫃</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>不少同學會將不常用的書本及雜物存放於課室的儲物櫃中，而學校現時要求同學於考試前清空整個儲物櫃。然而，在上課天將大量沉重的書本雜物搬運回家，對同學來說頗為不便。有見及此，本閣將向校方爭取，同學無需在第一次考試前完全清空儲物櫃，而是可以自行決定將與考試科目無關的物品繼續存放於儲物櫃內。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">12. 爭取提早及延長校服過渡期</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>鑑於近年全球暖化加劇，氣溫持續上升且天氣反覆無常。然而，校方過往通常將夏季校服的過渡期定於四月尾才開始。在炎熱天氣下，同學仍須穿着長袖冬季校服，難免感到不適。有見及此，本閣將向校方爭取，將校服過渡期提早至四月初開始，並延長為三星期，讓同學可因應當日氣溫，自行決定穿着冬季或夏季校服。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">13. 解決 Band 房氣味問題</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>現時Band房，因為窗戶密閉，難以散味，再加上午飯時候開放作為午餐地點，食物的氣味殘留，導致不少同學反映Band房內有一股飯餿味。因此，本閣爭取在Band房內添置空氣清新劑，並於日常打開窗戶保持空氣流通，確保空氣清新。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">14. 爭取學生於 30 度或以上的天氣下可以穿着運動服回校</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>鑑於近年全球暖化加劇，夏季氣溫持續攀升，炎熱天氣日漸頻繁。在酷熱環境下，同學穿着整齊校服上課，體感遠比知識穿着運動服更為悶熱，容易導致不適。有見及此，本閣將向校方積極爭取，當將軍澳地區氣溫在6:30am達30度或以上時，允許學生穿著運動服回校上課，讓同學能在炎夏中保持更舒適的學習狀態。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">15. 放寬申請多個 nd 職位的標準</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>鑑於不少同學反映申請多個nd職位的標準過於嚴格，且不少未達標準的同學亦認為自己仍有不少餘力，可以擔任多一個nd職位。有見及此，本閣將向校方積極爭取將中一至中四同學的標準由「上學年全級名次前30名」放寬至「上學年平均分高過全級中位數」。此外，本閣將爭取將中五同學的標準由「上學年英文、數學及選修科每科平均分不低於60分，中文及公民與社會發展科平均分不低於55分」放寬至「上學年英文、數學及兩科選修科平均分不低於60分，中文及公民與社會發展科平均分不低於55分」，讓更多同學有機會接觸更多崗位。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">17. 爭取取消使用 MDM，改為使用 Wi-Fi 攔截不適用網站</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>鑑於現行流動設備管理系統（MDM）對同學的個人平板電腦造成較多操作上的限制，容易造成設備使用不便。有見及此，本閣將向校方積極爭取取消強制安裝及使用MDM系統，改為於校園Wi-Fi網絡層面實施網站過濾及攔截。本閣建議校方僅於校內透過校園網絡封鎖娛樂及無關學習的網站，既能確保課堂學習專注度，亦能保障同學對個人裝置的自主權與私隱。本閣期望透過此舉，平衡電子學習效率與學生權益，營造更具信任度的學習環境。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">18. 爭取修膳籃球場側邊的石屎地</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>鑑於籃球場側邊的石屎地面因長期使用及風化，出現凹凸不平及破損情況，不僅影響同學日常運動及休憩時的體驗，亦增加同學意外跌倒受傷的風險，存在安全隱患。在過往更有學生在打籃球時，因救球而在石屎地上跌倒而受傷。有見及此，本閣將向校方積極爭取盡快安排工程修繕該區地面，進行鋪平及防滑處理。本閣期望透過此舉，改善校園硬件設施，為同學提供一個更安全、舒適的運動及活動空間。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">19. 爭取更換殘破體育設備</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>鑑於校內部分體育設備如籃球、羽毛球拍等，因長期使用而出現磨損及殘破情況，嚴重影響同學在體育課及課外活動時的運動體驗。有見及此，本閣將向校方積極爭取撥款，全面檢視並更換老舊及損壞的體育器材。本閣期望透過此舉，優化校園體育資源，提升同學的運動體驗，鼓勵大家積極參與體育鍛鍊。</p>
+                    </div>
+                </div>
+
+                <h2 class="section-group-title">III. 服務</h2>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">1. 提供外用冰塊作消暑用途</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>不少同學在夏日時都會使用飲水機裝冷水解暑。惟使用人數較多時，飲水機的製冷系統未能提供充足的冷水，等候時間亦相對較長。因此，本閣決定利用學生會會議室內的冰箱製作冰塊，供同學使用以解暑。同學可自備水樽或容器，向本閣職員領取冰塊，方便隨時消暑降溫。本閣亦將會定期清潔製冰器，以確保冰塊乾淨衞生。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">2. 提供驅蚊用品</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>不少同學反映學校蚊患問題由來已久，在潮濕天氣下尤為嚴重。由於校園內樹蔭較多，容易滋生蚊蟲，不僅影響整體衛生，亦對同學的日常學習與課外活動造成困擾。為打造一個更潔淨、舒適的校園環境，本閣將於學生會室及更衣室內提供蚊怕水、防蚊貼等驅蚊用品，並定期檢查用品存量，確保供應充足，供有需要的同學隨時取用。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">3. 轉盤</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>此服務將以網頁形式呈現。學校附近商場林立，供同學選擇的餐廳林林總總，不少同學會面臨難以決定用膳地點的問題。有見及此，本閣將建立學校附近餐廳的資料庫，同學可隨時查閱各餐廳的類型、價位及地址等資訊。網頁內亦會顯示與學生會合作提供福利優惠的餐廳及商舖，並以地圖形式標示位置，方便同學直接使用學生會所蒐集的各項福利優惠，節省時間之餘亦能享受更多消費折扣。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">4. 提供紙箱借用服務</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>每逢考試前夕，學校均會要求同學清空儲物櫃，不少同學需將大量沉重書本搬運回家，造成諸多不便。有見及此，本閣將於須要清空儲物櫃的時段提供紙箱借用服務。有需要的同學可到學生會室領取紙箱協助搬運，使用完畢後歸還即可，既提高搬運效率，亦可減輕同學負擔。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">5. 提供售賣暖包服務</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>本閣考慮到天氣寒冷時，同學的上課表現及專注力或會受到影響。為協助同學應對低溫天氣，本閣將提供暖包售賣服務，有需要的同學可到學生會室購買。此服務能讓同學不用走出校門，亦能在寒冷的日子中保持手部溫暖，提升學習效率。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">6. 提供女性衛生用品</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>本閣考慮到女同學在生理週期時可能會遇到突發情況，為了讓同學能夠安心上課，無需因此事而感到困擾，本閣將於女廁提供去漬筆及女性衛生用品，供有需要的同學隨時使用，以備不時之需。本閣亦會定期檢查用品存量，確保供應充足。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">7. 提供雪櫃及微波爐供同學使用</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>本閣將繼續為同學提供雪櫃及微波爐服務，供有需要的同學冷凍或加熱食物，以便利同學。同學可於課餘時間自行到學生會室使用相關設備，本閣會定期清潔及檢查設備，確保衛生安全，讓同學能夠安心使用。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">8. 於大型活動提供即影即有服務</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>為了讓同學的校園生活增添更多難忘回憶，本閣將於大型活動期間提供即影即有服務，為師生拍下照片，並可即時取回照片，在美好的時刻留下紀念。服務將於指定地點提供，並由本閣成員幫助拍攝，該地點將會在活動前公佈。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">9. 於體育活動期間提供物資補給</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>鑑於Sports Day及新春長跑等體育活動對體能消耗較大，部分同學在比賽後可能出現肌肉疲勞或輕微不適，影響餘下比賽表現。有見及此，本閣將於上述活動期間提供水、能量飲品、退熱貼及肌肉貼等物資補給，供有需要的同學使用，希望同學能在比賽期間維持最佳狀態，減少受傷風險。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">10. 於 Music Day 及 Talent Show 提供手燈</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>為活躍及帶動現場氣氛，提升Music Day及Talent Show的互動性，本閣將繼續購入手燈，並於活動期間派發。台下同學及老師可透過使用手燈，表示對表演者的支持，並盡情投入活動。借取手燈的同學需於活動結束後歸還，以便循環再用。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">11. 與 Campus TV 合作提供攝錄服務</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>本閣將與Campus TV保持緊密合作，於校方各項活動及學生會活動期間進行攝影及影片拍攝，為同學記錄珍貴時刻。同時，本閣將與Campus TV商討改善同學取回活動相片及影片的流程，令同學能夠更快捷方便地透過Campus TV及學生會溝通渠道取回自己的相片，重溫校園生活中的精彩瞬間。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">12. 提供雨傘借用及相關服務</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>考慮到同學或會因突如其來的雨天而導致各種不便，有見及此，本閣將提供雨傘借用服務，於學生會室或學校門口向當天沒有攜帶雨傘或有需要的同學借出雨傘。同學使用完畢後須儘快歸還，本閣亦會登記借用人訊息，以確保資源得以妥善管理。此外，本閣將積極考慮加入更多便利設施，如雨傘除水器等，方便同學在下雨天仍能如常上課及進行活動，減少雨天帶來的不便。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">13. 提供學生會意見箱及 Google Form 收集意見</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>本閣希望鼓勵同學主動提出對學校政策或其他方面的疑問或意見。透過意見箱及Google Form提交的意見，將會在經過簡單審核後直接轉交至相關負責老師或部門，並在獲得回應後於3至5個工作天內透過社交媒體公開回覆。本閣希望透過此服務鼓勵同學積極反映意見，並確保所有同學提出的意見均能得到相關老師的回應及跟進，共同推動校園持續進步。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">14. 於更衣室內提供濕紙巾</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>每到炎熱的夏天，許多同學在體育課或各類活動後感到酷熱，大汗淋漓，亦可能引起異味，影響個人舒適度及衛生。有見及此，本閣將於更衣室內提供濕紙巾，供有需要的同學使用。同學可選擇於活動前後使用，以減少汗水和異味，保持身體清爽，讓同學於活動後能更舒適地返回課室上課，無需受流汗或衛生問題困擾。</p>
+                    </div>
+                </div>
+
+                <h2 class="section-group-title">IV. 大型活動</h2>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">1. Talent Show</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>為了讓同學能夠透過不同的舞台發光發亮，本閣將會舉辦Talent Show作為平台，讓同學展現自己獨特的才能。活動將安排於試後活動期間舉行，讓同學能從繁重的學業中得到放鬆身心的機會，同時欣賞身邊同學的精彩演出。為了促進師生交流，讓同學及老師能夠透過活動更認識彼此，本閣將會特設師生組別，鼓勵同學與老師一同參與Talent Show，共同綵排及演出，在合作中建立更緊密的師生關係。此外，本閣亦會積極考慮並嘗試邀請名人以嘉賓身份出席活動，以增添活動氣氛。本閣相信，Talent Show不僅是一個讓同學展示才華的重要舞台，更是一個凝聚全校師生、共同創造美好回憶的機會。</p>
+                    </div>
+                </div>
+
+                <h2 class="section-group-title">V. 小型活動</h2>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">1. 羽過天籃</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>基於本校同學對運動的熱忱，本閣特意舉辦體育比賽。透過此比賽，可以促進班內凝聚力，增強同學對班級的歸屬感，培養同學的團隊合作精神及體育精神。比賽包括班際籃球比賽及班際羽毛球比賽，讓不同運動興趣的同學均有機會參與。此外透過自由組隊的足球賽及撕名牌大賽，師生間可互相切磋，交流球技及心得，促進校園共融氣氛。本閣相信，體育比賽不僅能讓同學在學業之餘舒展身心，展現才能，更能透過團隊競賽加深彼此之間的默契與友誼。</p>
+                        
+                        <p style="padding-left: 1rem;"><strong>1.1 班際籃球比賽：</strong> 班際籃球比賽會使用全場進行，每班需要派出男女各 5 名球員及最多男女各 2 名後備成員參賽。高中組的比賽將會於上學期放學後進行，使中六的同學亦能參與此活動，在畢業前創造青春熱血的回憶，在中學生涯的未尾添上精彩的一筆。初中組的比賽則會於下學期放學後及週會期間進行。籃球比賽將會分為男女舉行，男子組每場 15 分鐘，女子組 10 分鐘，雙方均可要求一次 30 秒暫停。比賽期間不停錶，其他規則主要按照 FIBA 國際籃球規則進行。</p>
+                        
+                        <p style="padding-left: 1rem;"><strong>1.2 班際羽毛球比賽：</strong> 班際羽毛球比賽將會於該組別籃球比賽結束後舉行，每班需要派出男女各 2 名隊員，及男女最多各 2 名後備球員參賽。比賽每局 10 分鐘，不設中場暫停。其他規則主要按照世界羽毛球聯會比賽規則進行。</p>
+                        
+                        <p style="padding-left: 1rem;"><strong>1.3 男子師生足球比賽：</strong> 男子師生足球比賽不分年齡組別，學生可自由組成五人正選及最多兩人後備的隊伍，亦能夠邀請老師入隊。最多8隊，比賽每局20分鐘，雙方均可要求1次 30秒暫停。其他規則按照FIFA五人足球球例進行。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">2. 星火灼夜</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>為促進師生關係，拉近你和我的距離。本閣將舉辦一系列由下午到晚上的活動，讓師生體驗另一面的主恩生活。<br>
+                        師生於活動中能一起參與一連串的集體活動，如密室逃脫、劇本殺、燒烤等。每天於忙碌的學習生活中奔波，相信師生很久都沒有真正放鬆休息。於活動中，師生不但可以體驗難得的寧靜校園生活，更可以不受干擾地盡情傾談、圍爐夜話，為師生帶來難忘的一夜。</p>
+                    </div>
+                </div>
+
+                <h2 class="section-group-title">VI. 其他活動</h2>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">1. 校政問答大會</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>此活動將會於初中及高中週會期間舉行。同學在日常生活中對學校都有不同的疑問或意見，因此，本閣將會舉辦校政問答大會供同學向相關負責老師提問校政問題。透過此活動，學生對學校政策有更清晰的了解，亦能明白政策訂立背後的原因及意義。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">2. 聖誕聯歡會畫黑板比賽</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>為增添聖誕氣氛，本閣將會舉辦聖誕聯歡會畫黑板比賽。此比賽除了可以為各個教室增添節日氛圍，各班同學更能夠透過畫黑板期間的過程，發揮班級的團隊合作以及動用每一個人的創造想像力，凝聚班級，創作出一幅共同完成的畫作。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">3. 中六打氣周活動</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>文憑試將近，為了向中六同學打氣，鼓勵同學積極面對考試壓力，舒緩緊張情緒，支持同學應對 DSE，本閣將會於中六 Last Day 前舉辦一連串打氣活動。</p>
+                        <p style="padding-left: 1rem;"><strong>3.1 中六打氣牆：</strong> 打氣牆將會設於地下或二樓繪馬牆，各個同學可以在牆上留下打氣鼓勵的字句，透過此方式，向中六同學打氣，給予鼓勵。</p>
+                        <p style="padding-left: 1rem;"><strong>3.2 中六打氣包：</strong> 本閣將會提供打氣包，包含零食福袋及鼓勵字卡等，為中六同學打氣，面對 DSE。</p>
+                        <p style="padding-left: 1rem;"><strong>3.3 文具售賣服務：</strong> 本閣將會於打氣周期間以低於市價的價格售賣文具，讓同學可以藉此機會，購入一批新文具應試。</p>
+                        <p style="padding-left: 1rem;"><strong>3.4 點歌服務：</strong> 本閣將會收集打氣卡，並透過中央廣播系統點播歌曲，以及讀出鼓勵加油的字句，為中六同學帶來動力。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">4. 敬師日</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>主恩的老師們豪不吝嗇向同學們傳遞著溫暖，絕對值得各位同學的敬意。本閣將於活動當天於地下設置壁報或於二樓設置繪馬牆，供同學寫下對老師的感激話語，亦會為各位同學拍攝敬師日話語再製成一段短片，提供平台予同學表達對老師的心意。另外，本閣亦會贈送小禮物予一眾老師，感謝老師多年來對我們的指導與照顧。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">5. 手機攝影比賽</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>為了讓同學欣賞身邊的人和事，本閣將會舉辦手機攝影比賽。比賽將會限制以手機拍攝相片，使所有同學能夠使用身邊最平凡的工具，記錄下最美妙的瞬間。比賽將會提供約 5 個不同主題供同學發揮。活動將會持續全年，並邀請老師擔任評審，選出優勝者。本閣亦將會積極研究於校內展示比賽優秀作品。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">6. Cdgrecord</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>本閣將會設立專屬於主恩人的紀錄大典，無論是學術或是娛樂的卓越成就，都可能納入其中。同學可以在空餘時間挑戰其他主恩人創下的紀錄或超越自我，在挑戰的過程中一嘗滿足的滋味，為校園生活增添一點色彩。</p>
+                    </div>
+                </div>
+
+                <h2 class="section-group-title">VII. 聯校活動</h2>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">1. 聯校聖誕聯歡會</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>除了校內的聖誕聯歡會，本閣亦將會舉辦聯校聖誕聯歡會。透過是次活動，同學能認識來自其他學校的學生，並透過聯歡會活動建立友誼，拓闊自己的社交圈子。本閣亦希望透過此活動，使同學更投入於聖誕氣氛中，放鬆身心靈。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">2. 聯校試卷交換</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>中六同學即將應對 DSE，為了使同學更有準備，本閣將會聯同數間學校舉辦聯校試卷交換計畫，互相交換中六 Mock Exam 的試卷，使同學熟悉更多不同題型，為 DSE 做好最佳準備。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">3. 聯校舞蹈及樂隊比賽</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>本校很多同學具備舞蹈方面的才能，為了提供一個舞台給同學們展耀才能，本閣將會聯同其他學校舉辦聯校舞蹈比賽。透過是次活動，同學能夠展現自己的才能，亦能認識其他學校的學生，擴闊社交圈子。本閣亦希望藉此次活動，讓同學在忙碌的學業中得到放鬆。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">4. 聯校英文口試練習</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>為了讓中五、六同學可以有更多口試練習機會，本閣將會與其他學校舉辦口試練習。希望可以藉此令中五六同學有更多學習機會，為公開試做好準備。</p>
+                    </div>
+                </div>
+
+                <h2 class="section-group-title">VIII. 聯盟學校</h2>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">聯盟學校簡介</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>本閣邀請了來自全港不同地區的中學學生會內閣建立聯校關係，並且透過合作舉辦聯校活動。希望透過聯校合作增加同學認識其他學校學生的機會，並拓闊眼界。</p>
+                    </div>
+                </div>
+
+                <h2 class="section-group-title">IX. 溝通渠道</h2>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">1. 社交媒體</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>本閣將會開設 Instagram帳號。帳號將會用於發布有關學生會的最新資訊，例如活動宣布及服務詳情等。同學亦可以透過該帳戶聯繫內閣成員，查詢有關活動詳情或反映意見。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">2. 學校電郵</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>本閣將定期透過學校電郵發佈有關活動的資訊、活動詳情等，方便同學獲取最新消息。另外，同學可透過私訊本閣 Instagram 帳號，或於限時動態內開版的意見收集箱，發表對本閣的相關意見，有助本閣為同學提供最佳服務。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">3. 網站</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>本閣將會設立網站。網站將會提供有關本閣服務及活動詳情，以及福利優惠地圖列表、附近餐廳列表等，提供一站式平台查閱所有學生會提供的資訊內容。同時網站亦會作為主要收集同學意見的渠道之一，並將相關意見轉達予有關部門。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title" onclick="toggleAccordion(this)">
+                        <span class="title-text">4. 活動問卷調查</span><span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>本閣將會於部分活動或服務完結後發送問卷調查，收集同學對活動的意見，作檢討及日後學生會參考之用。</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer class="main-footer">
+            <p>© 2026 學生會候選內閣 IGNIS.</p>
+        </footer>
+    </div>
+
+    <script src="ignis.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('q');
+            if (query) {
+                const input = document.getElementById('platformSearchInput');
+                if (input) {
+                    input.value = query;
+                    executePlatformSearch();
+                }
+            }
+        });
+
+        function handlePlatformSearch(event) {
+            if (event.key === 'Enter') {
+                executePlatformSearch();
+            }
+        }
+
+        function executePlatformSearch() {
+            const input = document.getElementById('platformSearchInput');
+            if (!input) return;
+            const query = input.value.toLowerCase().trim();
+            const items = document.querySelectorAll('#platformList .accordion-item');
+
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    item.style.display = 'block';
+                    if (query !== '') {
+                        item.classList.add('active');
+                    }
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignis - 主頁</title>
+    <link rel="stylesheet" href="ignis.css">
+    <link href="https://fonts.googleapis.com/css2?family=Impact&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="hero-section">
+            <h1 class="brand-title">IGNIS</h1>
+            <p class="brand-tagline">學生會候選內閣</p>
+        </header>
+
+        <nav class="sticky-navbar">
+            <div class="nav-tabs">
+                <button class="nav-link active">主頁</button>
+                <a href="platform.html" class="nav-link-btn">政綱</a>
+                <a href="welfare.html" class="nav-link-btn">福利</a>
+                <a href="events.html" class="nav-link-btn">活動</a>
+                <a href="contact.html" class="nav-link-btn">聯絡我們</a>
+            </div>
+            <div class="search-container">
+                <input type="text" id="homeSearchInput" placeholder="搜尋..." onkeypress="handleHomeSearch(event)">
+                <button class="search-btn" onclick="executeHomeSearch()">搜尋</button>
+            </div>
+        </nav>
+
+        <main class="content-sections">
+
+            <div class="category-header">星火凝聚 同行無懼</div>
+            <div class="category-subtitle">Spark with Ignis Shine as Brightness</div>
+
+            <section class="about-card">
+                <div class="about-content">
+                    <p>Ignis 在拉丁文中意指「火焰」。火焰由微小的火花開始，在黑暗中燃亮希望，在寒冷中傳遞溫暖。</p>
+                    <p>Ignis 的 25 位閣員，或許每一個都只是一束微弱的火苗，但當我們團結一致，就能成為熊熊烈火，點燃校園的熱情與活力。</p>
+                    <p>我們會如同火焰般，以赤誠熾熱的心服務同學，傾聽、理解每一位同學最真實的訴求，舉辦多元而精彩的活動，點亮大家的校園生活。</p>
+                    <p>我們相信，火焰能驅散隔閡，凝聚彼此。無論是學術路上的迷惘，還是校園生活中的孤單，我們都會與你共同面對。</p>
+                </div>
+            </section>
+
+            <div class="category-header">核心理念</div>
+            
+            <section class="values-grid">
+                <div class="value-card">
+                    <div class="value-letter">I</div>
+                    <div class="value-details">
+                        <h3>Impassioned 熾熱熱情</h3>
+                        <p>Ignis以內在的熱情為驅動，將真誠投入每項任務中，用真摯的溫度與堅定不移的信念對待每一件事。</p>
+                    </div>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-letter">G</div>
+                    <div class="value-details">
+                        <h3>Gracious 包容謙遜</h3>
+                        <p>Ignis致力營造包容的氛圍，以謙遜與尊重為指引，讓友善成為每次互動的基礎，並用心聆聽與珍視不同的聲音。</p>
+                    </div>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-letter">N</div>
+                    <div class="value-details">
+                        <h3>Novel 勇於創新</h3>
+                        <p>Ignis不局限於傳統框架，勇於探索全新的區域，將未被發掘且大膽的概念轉化為具體的創新成果。</p>
+                    </div>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-letter">I</div>
+                    <div class="value-details">
+                        <h3>Imaginative 富想像力</h3>
+                        <p>Ignis的思想不受邊界所限，善於構想獨特的可能性，透過前瞻性的思維激發活力，創造富有靈感的方案。</p>
+                    </div>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-letter">S</div>
+                    <div class="value-details">
+                        <h3>Sincere 真誠信任</h3>
+                        <p>Ignis以真誠與信任為根本，恪守言語與行動的承諾，透過坦誠公開的溝通與全心全意的奉獻，建立持久的信任關係。</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="btn-container" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+                <a href="welfare.html" class="orange-btn">查看福利 ＋</a>
+                <a href="events.html" class="orange-btn">瀏覽活動 ＋</a>
+                <a href="platform.html" class="orange-btn">瀏覽完整政綱全文 →</a>
+            </div>
+
+        </main>
+
+        <footer class="main-footer">
+            <p>© 2026 學生會候選內閣 IGNIS.</p>
+        </footer>
+    </div>
+
+    <script src="ignis.js"></script>
+</body>
+</html>

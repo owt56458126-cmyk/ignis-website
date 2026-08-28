@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignis - 學生會活動</title>
+    <link rel="stylesheet" href="ignis.css">
+    <link href="https://fonts.googleapis.com/css2?family=Impact&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="hero-section">
+            <h1 class="brand-title">IGNIS</h1>
+            <p class="brand-tagline">學生會候選內閣</p>
+        </header>
+
+        <nav class="sticky-navbar">
+            <div class="nav-tabs">
+                <a href="ignis.html" class="nav-link-btn">主頁</a>
+                <a href="platform.html" class="nav-link-btn">政綱</a>
+                <a href="welfare.html" class="nav-link-btn">福利</a>
+                <button class="nav-link active">活動</button>
+                <a href="contact.html" class="nav-link-btn">聯絡我們</a>
+            </div>
+            <div class="search-container">
+                <input type="text" id="eventSearchInput" placeholder="搜尋活動..." onkeypress="handleEventSearch(event)">
+                <button class="search-btn" onclick="executeEventSearch()">搜尋</button>
+            </div>
+        </nav>
+
+        <main class="content-sections">
+
+            <div class="category-header">精彩校園活動</div>
+
+            <div class="welfare-grid" id="eventList">
+                <div class="welfare-card">
+                    <h3>Talent Show 才藝展演賽事</h3>
+                    <p>提供舞台讓同學展現音樂、舞蹈及各項才藝，凝聚校園藝術熱情。</p>
+                </div>
+                <div class="welfare-card">
+                    <h3>「羽過天籃」班際賽</h3>
+                    <p>舉辦班際羽毛球與籃球聯賽，提升各班凝聚力與運動體能。</p>
+                </div>
+                <div class="welfare-card">
+                    <h3>星火灼夜師生體驗夜</h3>
+                    <p>促進師生交流，營造溫馨且具儀式感的校園夜間體驗活動。</p>
+                </div>
+                <div class="welfare-card">
+                    <h3>中六打氣周 (S6 Cheering Week)</h3>
+                    <p>為即將應考文憑試的畢業班同學送上誠摯祝福與應援物資。</p>
+                </div>
+                <div class="welfare-card">
+                    <h3>聯校舞蹈及樂隊交流比賽</h3>
+                    <p>打破校園界限，與周邊學校聯辦音樂及舞蹈切磋大賽。</p>
+                </div>
+                <div class="welfare-card">
+                    <h3>聖誕狂歡節聯歡活動</h3>
+                    <p>打造歡樂聖誕氛圍，安排攤位遊戲、表演及豐富抽獎。</p>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="main-footer">
+            <p>© 2026 學生會候選內閣 IGNIS.</p>
+        </footer>
+    </div>
+
+    <script src="ignis.js"></script>
+    <script>
+        function handleEventSearch(event) {
+            if (event.key === 'Enter') {
+                executeEventSearch();
+            }
+        }
+
+        function executeEventSearch() {
+            const input = document.getElementById('eventSearchInput');
+            if (!input) return;
+
+            const query = input.value.toLowerCase().trim();
+            const cards = document.querySelectorAll('#eventList .welfare-card');
+
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
